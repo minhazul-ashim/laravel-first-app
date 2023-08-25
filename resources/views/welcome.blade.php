@@ -17,6 +17,6 @@
         @vite('resources/js/app.js')
     </head>
     <body class="antialiased">
-        <h1 class="text-center">Hello ygytytytytytytyttetruityuuyyuu</h1>
+        <h1 class="text-center">Hello From homepage. Hehe</h1>
     </body>
 </html>
