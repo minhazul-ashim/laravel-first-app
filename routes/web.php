@@ -26,3 +26,14 @@ Route::get('/post/{id}', function ($id) {
 Route::get('comment/{title}', function ($title) {
     return "<h1>This is Comment with Title $title. Hehe</h1>";
 })->whereAlpha('title');
+
+Route::redirect('/hello', '/post', 301);
+
+Route::prefix('page')->group(function() {
+    Route::get('/about', function() {
+        return "<h1>This is Page About</h1>";
+    });
+    Route::get('/desc', function () {
+        return "<h1>This is Page Description</h1>";
+    });
+});
