@@ -16,7 +16,25 @@
         </style>
         @vite('resources/js/app.js')
     </head>
+        @php 
+            $names = ["Bangladesh" , "United Kingdom" , "United States", "Germany"];
+        @endphp
     <body class="antialiased">
         <h1 class="text-center">Hello From homepage.</h1>
+        <ul>
+        @for ($i = 0; $i < 4; $i++)
+         @if ($i % 2 == 0)
+            <li style="color:red;">{{$names[$i]}}</li>
+         @else
+            <li style="color: blue;">{{$names[$i]}}</li>
+         @endif
+        @endfor
+        <br>
+        <br>
+        <br>
+        @foreach ( $names as $name)
+            <li>{{$name}}</li>
+        @endforeach
+        </ul>
     </body>
 </html>
